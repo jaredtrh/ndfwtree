@@ -431,6 +431,7 @@ public:
     using valuetype = T;
     using ftype = F;
     using gtype = G;
+    using htype = H;
     using szarraytype = array<size_t, dimen>;
     template<typename F1 = F, typename G1 = G, typename H1 = H>
     explicit ndfwtreerrimpl(
