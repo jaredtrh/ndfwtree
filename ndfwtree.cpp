@@ -83,7 +83,7 @@ void buildbit(
     }
 }
 template<typename T, size_t K, size_t N, typename F, size_t... Idxs>
-void buildbitshelper1(
+inline void buildbitshelper1(
     vector<array<T, K>>& bits, const array<size_t, N>& szs, const F& f,
     size_t lhs, size_t rhs, index_sequence<Idxs...>)
 {
