@@ -28,7 +28,7 @@ inline void ndvectorsizeshelper(const V& v, array<size_t, N>& szs) {
         ndvectorsizeshelper<I + 1>(v[0], szs);
 }
 template<typename V>
-inline auto ndvectorsizes(const V& v) {
+auto ndvectorsizes(const V& v) {
     array<size_t, ndvectordimenvalue<V>> szs;
     ndvectorsizeshelper<0>(v, szs);
     return szs;
