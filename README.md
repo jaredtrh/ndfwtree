@@ -2,8 +2,6 @@
 
 N-dimensional Fenwick trees supporting different combinations of point/range updates/queries with dimensions set at compile-time. Requires fancy C++17 stuff like [fold expressions](https://en.cppreference.com/w/cpp/language/fold).
 
-Not thoroughly tested. May be usable for competitive programming. Idk.
-
 ## Common
 
 | Template Parameter | Description                                   | Default              |
@@ -17,7 +15,7 @@ Not thoroughly tested. May be usable for competitive programming. Idk.
 
 `szarraytype` is a member type alias of `std::array<std::size_t, dimen>` where `dimen` is the number of dimensions. Size constructors and most member functions have an overload that takes a `szarraytype` instead of `dimen` number of `std::size_t`s.
 
-Space complexity assumes `F`, `G`, and `H` are constant time (although they might not be). It also assumes the compiler will inline the recursive template instantiations (GCC seems like it does) and so does not count stack space.
+Space complexity assumes `F`, `G`, and `H` are constant time (although they might not be). It also assumes the compiler will inline the recursive template instantiations (GCC seems like it does with optimizations turned on) and so does not count stack space.
 
 ## Range-Query + Point-Update
 
